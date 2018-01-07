@@ -1,0 +1,104 @@
+<script type="text/javascript">
+    RED.nodes.registerType('aws-cloudsearch',{
+        category: 'input',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+            cloudsearch : {type: "aws-cloudsearch-config", required :true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"aws-cloudsearch";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="aws-cloudsearch">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-cloudsearch"><i class="icon-tag"></i> CloudSearch Config </label>
+        <input type="text" id="node-input-cloudsearch" placeholder="CloudSearch Config">
+    </div>    
+</script>
+
+<script type="text/x-red" data-help-name="aws-cloudsearch">
+    <p>A simple node that converts the message payloads into all lower-case characters</p>
+</script>
+
+
+<!-- aws config -->
+<script type="text/javascript">
+    RED.nodes.registerType('aws-config',{
+        category: 'config',
+        defaults: {
+            accessKeyId: {value:"",required:true},
+            secretAccessKey: {value:"",required:true},
+            region: {value:"",required:true},
+            name: {value:"",required:false},
+        },
+        label: function() {
+            return this.name || "AWS Config";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="aws-config">
+    <div class="form-row">
+        <label for="node-config-input-accessKeyId"><i class="icon-bookmark"></i>Access Key ID</label>
+        <input type="text" id="node-config-input-accessKeyId">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-secretAccessKey"><i class="icon-bookmark"></i>Secret Access Key</label>
+        <input type="text" id="node-config-input-secretAccessKey">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-region"><i class="icon-bookmark"></i>Region</label>
+        <input type="text" id="node-config-input-region">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-name"><i class="icon-bookmark"></i>Name</label>
+        <input type="text" id="node-config-input-name">
+    </div>
+</script>
+
+
+<!-- cloudsearch config -->
+
+<script type="text/javascript">
+    RED.nodes.registerType('aws-cloudsearch-config',{
+        category: 'config',
+        defaults: {
+            aws: {type:"aws-config", required : true},
+            endpoint: {value:"",required:true},
+            apiVersion: {value:"",required:true},
+            name : {value:""}
+        },
+        label: function() {
+            return this.name || "AWS CloudSearch Config";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="aws-cloudsearch-config">
+    <div class="form-row">
+        <label for="node-config-input-aws"><i class="icon-bookmark"></i>AWS Config</label>
+        <input type="text" id="node-config-input-aws">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-endpoint"><i class="icon-bookmark"></i>Endpoint</label>
+        <input type="text" id="node-config-input-endpoint">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-apiVersion"><i class="icon-bookmark"></i>API Version</label>
+        <input type="text" id="node-config-input-apiVersion">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-name"><i class="icon-bookmark"></i>Name</label>
+        <input type="text" id="node-config-input-name">
+    </div>
+</script>

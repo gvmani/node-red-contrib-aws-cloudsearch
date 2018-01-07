@@ -1,0 +1,25 @@
+{
+  "name": "node-red-contrib-aws-cloudsearch",
+  "version": "1.0.0",
+  "description": "node for aws cloudsearch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "node-red": {
+    "nodes": {
+      "aws-cloudsearch": "aws-cloudsearch.js"
+    }
+  },
+  "keywords": [
+    "node",
+    "node-red",
+    "aws",
+    "cloudsearch"
+  ],
+  "author": "gv",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.171.0"
+  }
+}
