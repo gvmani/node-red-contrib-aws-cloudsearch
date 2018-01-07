@@ -5,8 +5,8 @@ This allows you to fetch AWS Cloudsearch data using node-red nodes.
 
 Installing node-red-contrib-aws-cloudsearch
 ----------------------------
-    
-    npm i node-red-contrib-aws-cloudsearch -g
+    cd ~/.node-red  #or wherever node-red is installed
+    npm i node-red-contrib-aws-cloudsearch
 
 
 Have questions?  Found a bug?
