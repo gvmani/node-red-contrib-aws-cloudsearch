@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-aws-cloudsearch",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "node for aws cloudsearch",
   "homepage": "https://github.com/gvmani/node-red-contrib-aws-cloudsearch",
   "main": "index.js",
